@@ -5,17 +5,17 @@ public class UserBuilder {
     public String lname;
     public int age;
 
-    public UserBuilder setFname(String fname) {
+    public UserBuilder fname(String fname) {
         this.fname = fname;
         return this;
     }
 
-    public UserBuilder setLname(String lname) {
+    public UserBuilder lname(String lname) {
         this.fname = lname;
         return this;
     }
 
-    public UserBuilder setAge(int age) {
+    public UserBuilder age(int age) {
         this.age = age;
         return this;
     }
