@@ -64,5 +64,16 @@ public class Employee{
         return this.getSal().intValue()-e2.getSal().intValue();
     }
 
+    public static int biFn2(Employee e1,Employee e2){
+        return e1.getEmpNumber()-e2.getEmpNumber();
+    }
+
+    public  int biFn3(Employee e1){
+        return e1.getEmpNumber();
+    }
+
+    public  boolean fun(){
+        return empNumber>4;
+    }
 
 }

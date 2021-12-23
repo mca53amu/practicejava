@@ -19,11 +19,11 @@ public class EmployeeData {
         arrayList.add(createEmpObject("Mohammad", 1000L, "THREE"));
         arrayList.add(createEmpObject("Mohammad", 1100L, "THREE"));
         arrayList.add(createEmpObject("Mohammad", 1200L, "FIVE"));
-        arrayList.add(createEmpObject("Mohammad", 13200L, "FIVE"));
+        arrayList.add(createEmpObject("Mohammad", 1320L, "FIVE"));
         arrayList.add(createEmpObject("Mohammad", 1400L, "FIVE"));
     }
 
-    private static Employee createEmpObject(String name, Long sal, String type) {
+    public static Employee createEmpObject(String name, Long sal, String type) {
         Employee e = new Employee(name);
         e.setEmpNumber(count++);
         e.setSal(sal);

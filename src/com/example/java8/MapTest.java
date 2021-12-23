@@ -11,14 +11,15 @@ public class MapTest {
         List<Employee> empList = EmployeeData.getEmpList();
 
         Map<Long, Employee> collect = empList.stream().
-                collect(Collectors.toMap(Employee::getSal, Function.identity(),(e1,e2)->e2, LinkedHashMap::new));
+                collect(Collectors.toMap(k->k.getSal(), Function.identity(),(e1,e2)->e2, LinkedHashMap::new));
 
-        System.out.println(collect);
+       // System.out.println(collect);
 
         Map<Long, List<Employee>> collect1 = empList.stream().collect(Collectors.groupingBy(Employee::getSal));
-        System.out.println(collect1);
+        //System.out.println(collect1);
 
         List<Employee> collect2 = collect1.entrySet().stream().flatMap(entry -> entry.getValue().stream()).collect(Collectors.toList());
         System.out.println(collect2);
+
     }
 }
