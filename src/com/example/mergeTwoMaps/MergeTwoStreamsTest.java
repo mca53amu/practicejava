@@ -14,5 +14,7 @@ public class MergeTwoStreamsTest {
         List<String> list2 = Arrays.asList("explained", "through", "programs");
         List<String> collect = Stream.of(list1, list2).flatMap(list -> list.stream()).collect(Collectors.toList());
         System.out.println(collect);
+        List<String> collect1 = Stream.concat(list1.stream(), list2.stream()).collect(Collectors.toList());
+        System.out.println(collect1);
     }
 }
