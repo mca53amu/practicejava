@@ -1,4 +1,4 @@
-package com.example.designpanttern;
+package com.example.designpanttern.strategy;
 
 public class StrategyPatternExample {
     public static void main(String args[]) throws InterruptedException {
