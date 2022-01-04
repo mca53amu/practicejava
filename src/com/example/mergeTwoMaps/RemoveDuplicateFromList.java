@@ -1,22 +1,25 @@
 package com.example.mergeTwoMaps;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Set;
-import java.util.TreeSet;
+import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class RemoveDuplicateFromList {
     public static void main(String[] args) {
-        Integer[] arr1 = new Integer[] { 1, 9, 8, 7, 7, 8, 9 };
-        List<Integer> integers = Arrays.asList(arr1);
-        Set<Integer> collect = integers.stream().collect(Collectors.toCollection(TreeSet::new));
-        System.out.println(collect);
+        Integer[] arr1 = new Integer[]{1, 9, 8, 7, 7, 8, 9};
 
-        Set<Integer> collect1 = integers.stream().collect(Collectors.toSet());
+        HashSet<Integer> hashSet = new HashSet<>(Arrays.asList(arr1));
+        System.out.println(hashSet);
+        Set<Integer> collect1 = Stream.of(arr1).collect(Collectors.toSet());
         System.out.println(collect1);
-        List<Integer> collect2 = integers.stream().distinct().collect(Collectors.toList());
+        HashSet<Integer> collect = Stream.of(arr1).collect(Collectors.toCollection(HashSet::new));
+        System.out.println(collect);
+        System.out.println("sort the elements");
+        TreeSet<Integer> collect2 = Stream.of(arr1).collect(Collectors.toCollection(TreeSet::new));
         System.out.println(collect2);
+        Stream.of(arr1).collect(Collectors.toCollection(HashSet::new));
+        System.out.println("preserve the order");
+        LinkedHashSet<Integer> collect3 = Stream.of(arr1).collect(Collectors.toCollection(LinkedHashSet::new));
+        System.out.println(collect3);
     }
 }

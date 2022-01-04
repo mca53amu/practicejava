@@ -15,9 +15,7 @@ public class MethodRefTest {
         System.out.println(empList);
         Stream<Employee> sorted = empList.stream().sorted(Employee::biFn);
         System.out.println(sorted.collect(Collectors.toList()));
-
         List<Employee> list = empList.stream().filter(Employee::fun).collect(Collectors.toList());
         System.out.println(list);
-
     }
 }
