@@ -32,6 +32,7 @@ public class MergeTwoMapsTest {
                 collect(Collectors.toMap(Map.Entry::getKey, Map.Entry::getValue,(a,b)->a,LinkedHashMap::new));
         System.out.println(collect);
         Stream<HashSet<String>> hashSetStream = Stream.of(new HashSet<String>());
+        //
 
     }
 }
